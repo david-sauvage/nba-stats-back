@@ -1,6 +1,7 @@
 import json
+from lambda_decorators import cors_headers
 
-
+@cors_headers
 def handler(event, context):
     fullSchedule = readCalendar()
     date = event["queryStringParameters"]['date']
